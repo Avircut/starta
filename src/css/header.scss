@@ -1,0 +1,186 @@
+.logo{
+  display: flex;
+  align-items: center;
+  gap:6px;
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+  }
+  &__title{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &__subtitle{
+    font-size: 12px;
+    opacity: .6;
+  }
+}
+.header{
+  .top-line{
+    background: #e3e3e3;
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0px 16px;
+      gap:15px;
+      width: 100%;
+    }
+    &__btn-group{
+      display: flex;
+      gap:8px;
+      align-items: center;
+    }
+    &__search{
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    &__search-input{
+      background-color: #fff;
+      font-size: 14px;
+      border-radius: 20px;
+      border: none;
+      padding:11.5px 44px;
+      min-width: 405px;
+    }
+    &__search-icon{
+      color:$text;
+      font-size: 16px;
+      position: absolute;
+      left:16px;
+    }
+    &__btn{
+      cursor: pointer;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+      background-color: $terracotta;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s all ease-in;
+      &:hover{
+        background-color: #fff;
+        color: $terracotta;
+      }
+    }
+    &__burger{
+      display: none;
+      font-size: 16px;
+    }
+  }
+  .nav{
+    background: #fff;
+    font-size: 16px;
+    &__inner{
+      padding: 22.5px 0;
+      width: 100%;
+    }
+    &__menu{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__menu-item{
+      opacity: .5;
+      transition: .3s all ease-in;
+      &_active,&:hover{
+        color: $terracotta;
+        opacity: 1;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.burger{
+  &__wrapper{
+    position: fixed;
+    box-shadow: -10px 4px 40px rgba(0, 0, 0, 0.25);
+    top:0;
+    bottom:0;
+    right:-1000px;
+    transition: .3s all ease-in-out;
+    min-width: 400px;
+    background: rgba(#fff,.8);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    gap:40px;
+    padding:25px;
+    color:$text;
+    overflow-y: hidden;
+    &_opened{
+      right:0;
+    }
+  }
+  &__closeBtn>i{
+    font-size: 32px;
+    cursor: pointer;
+    transition: .3s all ease;
+    &:hover{
+      color: $terracotta;
+    }
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+  }
+  &__menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    font-size: 16px;
+  }
+  &__btn-group{
+    display: flex;
+    gap:6px;
+    justify-content: center;
+    .top-line__search-input{
+      min-width: 205px;
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    }
+    &>.top-line__btn{
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    }
+  }
+}
+@media (max-width:800px) {
+  .header{
+    .top-line{
+      &__search,&__btn{
+        display: none;
+      }
+      &__burger{
+        display: flex;
+      }
+    }
+    .nav{
+      display: none;
+    }
+    .burger__wrapper{
+      display: flex; 
+    }
+    .burger__btn-group>*{
+      display: flex;
+    }
+  }
+}
+@media (max-width:500px) {
+  .header{
+    .burger__wrapper{
+      width: 100vw;
+      min-width: unset;
+      padding: 10px;
+    }
+    .top-line__search-input{
+      min-width: unset;
+      width: 100%;
+    }
+  }
+}

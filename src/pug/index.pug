@@ -1,0 +1,168 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Главная
+  body 
+    header.header
+      .header__top-line.top-line
+        .container
+          .top-line__inner
+            .top-line__logo.logo
+              img.logo__img(src="../images/logo/logo.png", alt="")
+              .logo__text
+                .logo__title Красноярск
+                .logo__subtitle Администрация города
+            .top-line__btn-group
+              .top-line__search
+                input(type="text",placeholder="Поиск по сайту ...").top-line__search-input
+                i.top-line__search-icon.bi.bi-search
+              .top-line__btn РУ
+              .top-line__btn
+                i.top-line__glasses-icon.ph-sunglasses
+              .top-line__burger.top-line__btn.burger
+                i.top-line__burger-icon.bi.bi-list
+            .burger__wrapper
+              .burger__closeBtn
+                i.burger__closeBtn-icon.bi.bi-x
+              .burger__content
+                ul.burger__menu
+                .burger__features
+      nav.header__nav.nav
+        .container
+          .nav__inner
+            ul.nav__menu
+              li.nav__menu-item.nav__menu-item_active
+                a.nav__menu-link(href="#") Главная
+              li.nav__menu-item
+                a.nav__menu-link(href="#") О городе
+              li.nav__menu-item
+                a.nav__menu-link(href="#") Новости
+              li.nav__menu-item
+                a.nav__menu-link(href="#") Онлайн-приемная обращений
+              li.nav__menu-item
+                a.nav__menu-link(href="#") Советник
+              li.nav__menu-item
+                a.nav__menu-link(href="#") Вакцинация
+    .wrapper
+      main.main
+        section.banner
+          .banner__slider
+            img.banner__item(src="images/content/banner-1.png", alt="")
+            img.banner__item(src="images/content/banner-1.png", alt="")
+            img.banner__item(src="images/content/banner-1.png", alt="")
+          .banner__arrows
+        .news-banner
+          .container
+            .news-banner__inner
+              .news-banner__slider
+                .news-banner__slider-item
+                  img.news-banner__item-img(src="images/content/news-1.png", alt="")
+                  a(href="#").news-banner__text
+                    p.news-banner__slider-desc Подпись к фото, возможно новости
+                    span.news-banner__slider-date 24.01.2022
+                .news-banner__slider-item
+                  img.news-banner__item-img(src="images/content/news-1.png", alt="")
+                  a(href="#").news-banner__text
+                    p.news-banner__slider-desc Подпись к фото, возможно новости
+                    span.news-banner__slider-date 24.01.2022
+                .news-banner__slider-item
+                  img.news-banner__item-img(src="images/content/news-1.png", alt="")
+                  a(href="#").news-banner__text
+                    p.news-banner__slider-desc Подпись к фото, возможно новости
+                    span.news-banner__slider-date 24.01.2022
+              .news-banner__list.news-list
+                a.news-list__item(href="#")
+                  h4.news-list__title Решения, принятые на заседании Правительства 21 января 2022 года
+                  span.news-list__date 22.01.2022
+                a.news-list__item(href="#")
+                  h4.news-list__title В Красноярске определили подрядчика на выполнение ремонтных работ на ул. Пограничников
+                  span.news-list__date 08.01.2022
+                a.news-list__item(href="#")
+                  h4.news-list__title Экономический форум-2022 «Экономика будущего страны»
+                  span.news-list__date 22.12.2021
+                a.news-banner__link-all(href="#") Читать все
+                  i.bi.bi-arrow-right-short.news-banner__arrow
+        section.news
+          .container
+            .news__inner
+              .news__head
+                h2.news__title Новости
+                a.news-banner__link-all(href="#") Читать все
+                  i.bi.bi-arrow-right-short.news-banner__arrow
+              .news__list.news-list
+                a.news-list__item(href="#")
+                  h4.news-list__title Решения, принятые на заседании Правительства 21 января 2022 года
+                  span.news-list__date 22.01.2022
+                a.news-list__item(href="#")
+                  h4.news-list__title В Красноярске определили подрядчика на выполнение ремонтных работ на ул. Пограничников
+                  span.news-list__date 08.01.2022
+                a.news-list__item(href="#")
+                  h4.news-list__title Экономический форум-2022 «Экономика будущего страны»
+                  span.news-list__date 22.12.2021
+        section.social
+          .container
+            .social__inner
+              h2.social__title Общественное мнение
+              .social__grid
+                a(href="#").social__img-link.social__feedback-link
+                  img.social__feedback(src="images/content/social-feedback.png")
+                .social__links
+                  a(href="#").social__link Опросы
+                  a(href="#").social__link Публичные соглашения
+                  a(href="#").social__link Общественный контроль
+                a(href="#").social__img-link.social__voting-link
+                  img.social__voting(src="images/content/social-voting.png")
+      footer.footer
+        .container
+          .footer__inner
+            .footer__head
+              .footer__logo.logo
+                img.logo__img(src="../images/logo/logo.png", alt="")
+                .logo__text
+                  .logo__title Красноярск
+                  .logo__subtitle Администрация города
+              .footer__social-block
+                h4.footer__title Следите за новостями
+                .footer__social-links
+                  a.footer__social-link(href="#")
+                    img.footer__social-icon(src="images/icons/tele.svg", alt="")
+                  a.footer__social-link(href="#")
+                    img.footer__social-icon(src="images/icons/insta.svg", alt="")
+                  a.footer__social-link(href="#")
+                    img.footer__social-icon(src="images/icons/twitter.svg", alt="")
+                  a.footer__social-link(href="#")
+                    img.footer__social-icon(src="images/icons/vk.svg", alt="")
+                  a.footer__social-link(href="#")
+                    img.footer__social-icon(src="images/icons/fb.svg", alt="")
+            .footer__grid
+              .footer__contacts
+                h4.footer__title Контакты
+                .footer__subcategory
+                  span.footer__subcategory-title факс
+                  a(href="tel:").footer__text +7 (391) 211-98-76
+                .footer__subcategory
+                  span.footer__subcategory-title отдел служебных писем
+                  a(href="tel:").footer__text +7 (391) 211-98-76
+                .footer__subcategory
+                  span.footer__subcategory-title обращения граждан
+                  a(href="tel:").footer__text +7 (391) 211-98-76
+                .footer__subcategory
+                  span.footer__subcategory-title телефон доверия:
+                  a(href="tel:").footer__text +7 (391) 211-98-76
+              .footer__address
+                h4.footer__title Адрес
+                p.footer__address-text 660049, г. Красноярск, ул. Карла Маркса, 93
+                .footer__subcategory
+                  span.footer__subcategory-title почта
+                  a(href="mailto:").footer__text adm@admkrsk.ru
+              nav.footer__nav
+                h4.footer__title Навигация по сайту
+                a.footer__link(href="#") Главная 
+                a.footer__link(href="#") Онлайн-приемная обращений 
+                a.footer__link(href="#") О городе
+                a.footer__link(href="#") Советник
+                a.footer__link(href="#") Новости
+                a.footer__link(href="#") Вакцинация 

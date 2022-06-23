@@ -1,0 +1,222 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'fonts';
+.news-list{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  font-family: 'Montserrat';
+  &__item{
+    background:#fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap:10px;
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 150%
+  }
+  &__date{
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: .4;
+  }
+}
+@import './header.scss';
+.banner{
+  position: relative;
+  &__item{
+    object-fit: cover;
+    min-height: 200px;
+    object-position: 10% 10%;
+  }
+  &__arrows{
+    position: absolute;
+    bottom:57px;
+    font-size: 0;
+    display: flex;
+    left:0;
+    right:0;
+    justify-content: center;
+    gap:20px;
+  }
+  .slick-arrow{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba($terracotta,.8);
+    width: 48px;
+    height: 48px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s all ease-in;
+    &:hover{
+      background-color: rgba(#fff,.8);
+      &::before{
+        background-color: $terracotta;
+      }
+    }
+    &::before{
+      mask: url(../images/icons/banner-arrow.svg) no-repeat 50% 50%;
+      content: '';
+      transition: .3s all ease-in;
+      width:12px;
+      display: block;
+      mask-size: cover;
+      height: 20px;
+      background-color: #fff;
+    }
+  }
+  .slick-prev{
+    transform: rotate(180deg);
+  }
+}
+.news-banner{
+  padding-top:70px;
+  padding-bottom: 60px;
+  &__inner{
+    display: flex;
+    gap:50px;
+    align-items: center;
+  }
+  &__slider{
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__slider-item{
+    display: flex !important;
+    position: relative;
+    font-family: 'Inter';
+    color:#fff;
+    margin-bottom: 27px;
+  }
+  &__desc{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__slider-date{
+    font-size: 14px;
+    opacity: .5;
+  }
+  &__item-img{
+    object-fit: none;
+    max-width: 763px;
+    max-height: 481px;
+  }
+  &__text{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba($text,.8);
+    padding:17px 33px;
+  }
+  &__link-all{
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: underline;
+    line-height: 150%;
+    opacity: .5;
+  }
+  &__arrow{
+    padding-left: 4px;
+    &::before{
+      font-size: 18px;
+      vertical-align: -0.15em;
+    }
+  }
+}
+.news{
+  padding-bottom: 82px;
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+.social{
+  padding-bottom: 77px;
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+  }
+  &__grid{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: auto auto / auto auto;
+    column-gap: 15px;
+    row-gap: 33px;
+    align-items: center;
+  }
+  &__feedback{
+    max-width: 850px;
+    max-height:auto;
+    object-fit: cover;
+    border-radius:16px;
+    width: 100%;
+  }
+  &__feedback-link{
+    width: 100%;
+  }
+  &__voting-link{
+    grid-row: 1/3;
+    max-width: 415px;
+    object-fit: cover;
+  }
+  &__voting{
+    border-radius: 16px;
+    width: 100%;
+  }
+  &__links{
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+    width: 100%;
+  }
+  &__link{
+    padding:24px 32px;
+    background-color: #fff;
+    color:$terracotta;
+    border-radius: 100px;
+    transition: .3s all ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    &:hover{
+      background-color: $terracotta;
+      color:#fff;
+      &::after{
+        background-color: #fff;
+      }
+    }
+    &::after{
+      mask: url(../images/icons/banner-arrow.svg) no-repeat 50% 50%;
+      content: '';
+      transition: .3s all ease-in;
+      width:11.5px;
+      display: block;
+      mask-size: cover;
+      height: 20px;
+      background-color: $terracotta;
+    }
+  }
+}
+@import './footer.scss';
+@import 'media';
